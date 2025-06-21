@@ -1,0 +1,28 @@
+{
+"name": "ahmed-al-sanadi-portfolio",
+  "description": "A portfolio website for Ahmed Al-sanadi showcasing projects and skills.",
+  "author": "Ahmed Al-sanadi <ahmedalsanadi40@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "portfolio",
+    "web development",
+    "Ahmed Al-sanadi"
+  ],
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "type-check": "tsc --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "next": "15.3.4"
+  }
+}
