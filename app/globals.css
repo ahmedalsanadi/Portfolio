@@ -1,26 +1,235 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300;400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 3, 11, 21;
+  --background-end-rgb: 3, 11, 21;
+  --primary-teal: #00BBB1;
+  --secondary-blue: #00C4F4;
+  --dark-bg: #030B15;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: 215 28% 17%;
+    --foreground: 0 0% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 180 100% 37%;
+    --primary-foreground: 222.2 84% 4.9%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 180 100% 37%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --radius: 0.5rem;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-[#030B15] text-white;
+    font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  .font-inria {
+    font-family: 'Inria Serif', serif;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-slate-900;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-[#00BBB1] rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-[#00C4F4];
+  }
+}
+
+@layer components {
+  .cosmic-glow {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cosmic-glow::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 187, 177, 0.1) 0%, rgba(0, 196, 244, 0.1) 100%);
+    border-radius: inherit;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .cosmic-glow:hover::before {
+    opacity: 1;
+  }
+
+  .glass-effect {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .gradient-border {
+    position: relative;
+    background: linear-gradient(135deg, #030B15 0%, #0a1628 100%);
+    border-radius: 12px;
+  }
+
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    background: linear-gradient(135deg, #00BBB1, #00C4F4);
+    border-radius: inherit;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: xor;
+    -webkit-mask-composite: xor;
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #00BBB1 0%, #00C4F4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  .particle {
+    position: absolute;
+    background: radial-gradient(circle, rgba(0, 187, 177, 0.8) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 20px rgba(0, 187, 177, 0.5);
+  }
+  to {
+    box-shadow: 0 0 30px rgba(0, 196, 244, 0.8);
+  }
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 3s ease-in-out infinite;
+}
+
+/* Typography classes */
+.heading-1 {
+  font-family: 'Inria Serif', serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.heading-2 {
+  font-family: 'Inria Serif', serif;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.heading-3 {
+  font-family: 'Inria Serif', serif;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.content-1 {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.content-2 {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.content-3 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* Mobile responsive typography */
+@media (max-width: 768px) {
+  .heading-1 {
+    font-size: 32px;
+  }
+  
+  .heading-2 {
+    font-size: 28px;
+  }
+  
+  .content-1 {
+    font-size: 24px;
+  }
+  
+  .content-2 {
+    font-size: 20px;
+  }
 }
