@@ -1,0 +1,110 @@
+{
+  "projects": [
+    {
+      "name": "Movie Streaming App",
+      "min_desc": "A streaming platform for movies and TV shows",
+      "description": "Feature-rich movie streaming app with advanced search, watchlists, multi-language support & Firebase auth",
+      "techs": [
+        "Next.js",
+        "React",
+        "Tailwind CSS",
+        "Firebase",
+        "i18next"
+      ],
+      "screenshots": [
+        "https://raw.githubusercontent.com/ahmedalsanadi/Movie-Streaming-App/refs/heads/dev/screenshots/image-1.png",
+        "https://raw.githubusercontent.com/ahmedalsanadi/Movie-Streaming-App/refs/heads/dev/screenshots/image.png"
+      ],
+      "github": "https://github.com/ahmedalsanadi/Movie-Streaming-App",
+      "deployment": "https://movie-streaming-app-virid.vercel.app/"
+    },
+    {
+      "name": "Car Rental",
+      "min_desc": "Premium Car Rental Platform",
+      "description": "A car rental application that allows users to browse and rent cars. It includes features like filtering cars by type, viewing car details, and managing rentals.",
+      "techs": [
+        "Next.js 15",
+        "React 18",
+        "TypeScript",
+        "Tailwind CSS",
+        "Shadcn/ui"
+      ],
+      "screenshots": null,
+      "github": "https://github.com/ahmedalsanadi/car-rental",
+      "deployment": "https://car-rental-psi-nine.vercel.app/"
+    },
+    {
+      "name": "FinBiz Financial Dashboard",
+      "min_desc": "React-based Financial Dashboard",
+      "description": "FinBiz is a React-based financial dashboard featuring interactive charts (Chart.js), smooth animations (AOS), and responsive styling (Tailwind CSS) for an optimized UI/UX.",
+      "techs": [
+        "React",
+        "React DOM",
+        "CSS Modules",
+        "AOS",
+        "Chart.js",
+        "Swiper",
+        "React Icons"
+      ],
+      "screenshots": [
+        "https://raw.githubusercontent.com/ahmedalsanadi/FinBiz/refs/heads/main/screenshots/hero.png",
+        "https://raw.githubusercontent.com/ahmedalsanadi/FinBiz/refs/heads/main/screenshots/charts.png",
+        "https://raw.githubusercontent.com/ahmedalsanadi/FinBiz/refs/heads/main/screenshots/cards.png"
+      ],
+      "github": "https://github.com/ahmedalsanadi/FinBiz",
+      "deployment": "https://main--finbiz-al-sanadi.netlify.app/"
+    },
+    {
+      "name": "Twitter App",
+      "min_desc": "Full-stack web application mimicking Twitter core functionalities",
+      "description": "An integrated web application designed to simulate the basic functionality of the popular social media platform Twitter with features like posting tweets, liking, and commenting.",
+      "techs": [
+        "TypeScript",
+        "React",
+        "Next.js",
+        "Tailwind CSS",
+        "Prisma",
+        "MongoDB"
+      ],
+      "screenshots": [
+        "https://private-user-images.githubusercontent.com/76667739/373466655-f218d528-fff2-457c-a461-dfe433dca8c9.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTA5NzUzNDMsIm5iZiI6MTc1MDk3NTA0MywicGF0aCI6Ii83NjY2NzczOS8zNzM0NjY2NTUtZjIxOGQ1MjgtZmZmMi00NTdjLWE0NjEtZGZlNDMzZGNhOGM5LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MjYlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjI2VDIxNTcyM1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTA0MWUzNWQ3YTU0ZjU1OGZlMzE1YmNlMjE0MGViZTY2NGRkZDY1MzU0MDg5YjJmMzM3N2UzNTMyZmIxZTBiOTkmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.lm9gkeXcFCxuoEZHCcbJOJOXl5BUBH0_-8v9VpqzGJ0",
+        "https://private-user-images.githubusercontent.com/76667739/373466344-4964ae58-97ff-4828-a012-b468ffdf9b13.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTA5NzUzNDMsIm5iZiI6MTc1MDk3NTA0MywicGF0aCI6Ii83NjY2NzczOS8zNzM0NjYzNDQtNDk2NGFlNTgtOTdmZi00ODI4LWEwMTItYjQ2OGZmZGY5YjEzLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MjYlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjI2VDIxNTcyM1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTU3OGE1Y2I4NGRkZGI5M2EyM2E2MWM4YjhjM2M3NjVjNzRlMzdiY2NmYzg3YzJmOWExZGQ2YWUxNGU5MjgxNDAmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.qwJBd_ECbsA3pMewqM0kN8qrEMx2IpIP4vU8YXjbtBk"
+      ],
+      "github": "https://github.com/ahmedalsanadi/twitter-app",
+      "deployment": "https://twitter-2n7ic2inc-ahmedalsanadis-projects.vercel.app/"
+    },
+    {
+      "name": "Pixel Positions Job Application Site",
+      "min_desc": "A Laravel-based Hiring Website",
+      "description": "Pixel Positions Job Application Site! An advanced Job Application platform built with Laravel. powered by modern front-end tools, and enhanced for optimal user experience. This platform streamlines the process of job posting, searching, and application management. Allows employers to post job openings and users to explore various job opportunities. Built with Laravel, this site offers a user-friendly interface and seamless user experience for job seekers and employers alike.",
+      "techs": [
+        "Laravel",
+        "PHP",
+        "Tailwind CSS",
+        "MySQL"
+      ],
+      "screenshots": [
+        "https://raw.githubusercontent.com/ahmedalsanadi/Pixel-Job-App-Site/refs/heads/main/screenshots/hero.png",
+        "https://raw.githubusercontent.com/ahmedalsanadi/Pixel-Job-App-Site/refs/heads/main/screenshots/hover.png",
+        "https://raw.githubusercontent.com/ahmedalsanadi/Pixel-Job-App-Site/refs/heads/main/screenshots/show-apply.png"
+      ],
+      "github": "https://github.com/ahmedalsanadi/Pixel-Job-App-Site",
+      "deployment": null
+    },
+    {
+      "name": "Biccas Landing Site",
+      "min_desc": "Biccas ! a Modern Landing Page",
+      "description": "Biccas is a modern front-end landing page for a productivity tool, featuring a clean layout and intuitive navigation. It highlights the platform's value through customer logos, essential features, and clear benefits, enhancing user experience and engagement.Biccas is a responsive front-end web page designed according to a Figma design. This project showcases a modern and professional user interface aimed at improving productivity through a variety of features. Developed using HTML, CSS, and JavaScript, Biccas serves as a landing page for a productivity tool with a sleek design and user-friendly navigation.",
+      "techs": [
+        "HTML5",
+        "CSS3",
+        "JavaScript"
+      ],
+      "screenshots": [
+        "https://raw.githubusercontent.com/ahmedalsanadi/Biccas-Landing-Page-Ahmed-Al-Sanadi/refs/heads/main/screenshots/landing.png"
+      ],
+      "github": "https://github.com/ahmedalsanadi/Biccas-Landing-Page-Ahmed-Al-Sanadi",
+      "deployment": "https://ahmedalsanadi.github.io/Biccas-Landing-Page-Ahmed-Al-Sanadi/"
+    }
+  ]
+}

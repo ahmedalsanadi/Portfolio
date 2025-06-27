@@ -1,0 +1,257 @@
+{
+  "name": "Ahmed Mohammed Abdulrahman Al-Sanadi",
+  "dob": "June 1999",
+  "nationality": "Yemeni",
+  "maritalStatus": "Single",
+  "address": "Hada’a Street, Sana’a, Yemen",
+  "phone": "+967 736 333 377",
+  "email": "AhmedAlsanadi40@gmail.com",
+  "summary": "Highly motivated Software Developer and Full Stack Developer with over 4+ years of experience. Proficient in modern frameworks and technologies with strong expertise in both frontend and backend development. Passionate about solving complex problems and continuously learning new technologies to drive innovation and business success.",
+  "aboutMe": "I’m a passionate full-stack developer who loves building meaningful digital products. I believe in clean code, collaboration, and lifelong learning. Outside of coding, I enjoy reading about tech trends and mentoring junior developers. My goal is to build impactful software that helps people solve real-world problems.",
+  "skills": {
+    "frontend": [
+      "React",
+      "Next.js",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Tailwind",
+      "Bootstrap",
+      "jQuery"
+    ],
+    "backend": [
+      "PHP",
+      "Laravel (MVC)",
+      "MySQL",
+      "SQLite",
+      "Oracle",
+      "RESTful APIs",
+      "JSON",
+      "AJAX"
+    ],
+    "versionControl": [
+      "Git",
+      "GitHub"
+    ],
+    "testing": [
+      "Postman (API testing)"
+    ],
+    "deployment": [
+      "Vercel",
+      "Netlify"
+    ],
+    "mobileDevelopment": [
+      "Flutter",
+      "Dart"
+    ],
+    "tools": [
+      "Agile",
+      "UML",
+      "Postman"
+    ],
+    "otherLanguages": [
+      "Java",
+      "C#",
+      "C++"
+    ]
+  },
+  "experience": [
+    {
+      "title": "Mosnad Platform – Youth and Companies Engagement Platform",
+      "github": "https://github.com/ahmedalsanadi/mosnad-platform",
+      "technologies": [
+        "Laravel 11",
+        "Next.js 15",
+        "Tailwind CSS",
+        "MySQL",
+        "Sanctum API",
+        "Axios",
+        "Postman"
+      ],
+      "details": [
+        "Developed a mono-repo platform using Laravel 11 and Next.js 15",
+        "Implemented RBAC for secure panel management",
+        "Built modular components for frontend and backend",
+        "Optimized for SEO and documented APIs with Postman",
+        "Worked using SCRUM methodology"
+      ]
+    },
+    {
+      "title": "Pixel Job Application Site – Job Management Platform",
+      "github": "https://github.com/ahmedalsanadi/Pixel-Job-App-Site",
+      "technologies": [
+        "Laravel",
+        "Tailwind CSS",
+        "MySQL"
+      ],
+      "details": [
+        "Built a job posting and application platform",
+        "Implemented employer profiles with RBAC",
+        "Styled UI with Tailwind CSS and deployed via GitHub"
+      ]
+    },
+    {
+      "title": "TMDB API – Movie Streaming Project",
+      "github": "https://github.com/ahmedalsanadi/Movie-Streaming-App",
+      "technologies": [
+        "Next.js",
+        "React",
+        "Tailwind CSS",
+        "Firebase",
+        "Firestore",
+        "i18next"
+      ],
+      "details": [
+        "Developed movie streaming app using TMDB API",
+        "Implemented SEO, Firebase auth, and Firestore storage",
+        "Added multi-language support via i18next"
+      ]
+    },
+    {
+      "title": "FinBiz – Front-End Web Landing Page",
+      "github": "https://github.com/ahmedalsanadi/FinBiz",
+      "technologies": [
+        "React",
+        "Tailwind CSS",
+        "HTML",
+        "Chart.js",
+        "Figma"
+      ],
+      "details": [
+        "Developed UI for finance dashboard based on Figma",
+        "Integrated Chart.js for dynamic charts"
+      ]
+    },
+    {
+      "title": "Biccas – Front-End Web Landing Page",
+      "github": "https://github.com/ahmedalsanadi/Biccas-Landing-Page-Ahmed-Al-Sanadi",
+      "technologies": [
+        "HTML",
+        "CSS (Grid, Flexbox)",
+        "Figma"
+      ],
+      "details": [
+        "Built responsive landing page from Figma design",
+        "Used pure HTML/CSS with responsive layout"
+      ]
+    },
+    {
+      "title": "TracMission Web App",
+      "github": null,
+      "technologies": [
+        "Full-stack"
+      ],
+      "details": [
+        "Developed academic portfolio/task management app",
+        "Performed requirement analysis, database design, and UML modeling"
+      ]
+    },
+    {
+      "title": "Bee Mobile App",
+      "github": null,
+      "technologies": [
+        "Flutter",
+        "Dart",
+        "PHP",
+        "Oracle"
+      ],
+      "details": [
+        "Created a mobile app for hospital revenue tracking",
+        "Handled frontend, backend API, and database integration"
+      ]
+    }
+  ],
+  "workExperience": [
+    {
+      "role": "Mobile App Developer Intern",
+      "company": "Technology Stars Co",
+      "duration": "Feb 2022 – Jun 2022",
+      "tasks": [
+        "Developed cross-platform mobile apps",
+        "Analyzed requirements and integrated APIs"
+      ]
+    },
+    {
+      "role": "Customer Service & Data Entry",
+      "company": "YOU Telecom Company",
+      "duration": "Jul 2022 – Dec 2022",
+      "tasks": [
+        "Managed customer data and prepared contracts",
+        "Generated management reports"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Business Information Technology (BIT)",
+      "institution": "Malaysian International University of Technology Twintech",
+      "graduationDate": "June 2022",
+      "grade": "98.25%",
+      "cgpa": "3.93",
+      "honors": "First Class Honors"
+    },
+    {
+      "degree": "General Secondary School Certificate",
+      "graduationDate": "June 2017",
+      "grade": "90%"
+    }
+  ],
+  "courses": [
+    "Full-Stack Boot Camp with Mosnad (Ongoing)",
+    "Advanced English Course – Speak Up Institute (Ongoing)",
+    "Company Program – Injaz Yemen (Nov 2021)",
+    "Web Development – W3Schools (2020)",
+    "Self-Employment Training – Injaz Yemen (2019)",
+    "E-Marketing Fundamentals – Google (2019)",
+    "Advanced English – A2Z Institute (2018)"
+  ],
+  "achievements": [
+    "Completed multiple full-stack applications from scratch",
+    "Maintained 30+ repositories on GitHub",
+    "Consistently received positive client feedback on projects"
+  ],
+  "additionalSkills": [
+    "IT Project Management",
+    "SDLC and UML",
+    "Database Design",
+    "Agile / SCRUM",
+    "Power BI and Excel",
+    "Leadership and Teamwork",
+    "Adaptability and Self-Motivation"
+  ],
+  "languages": {
+    "arabic": "Native",
+    "english": "Fluent"
+  },
+  "contacts": {
+    "linkedin": "https://www.linkedin.com/in/ahmed-al-sanadi/",
+    "facebook": "https://www.facebook.com/share/19XciSG1wB/",
+    "github": "https://github.com/ahmedalsanadi"
+  },
+  "featuredProjects": [
+    {
+      "name": "Mosnad Platform",
+      "highlight": "Mono-repo architecture with Laravel + Next.js",
+      "role": "Full Stack Developer",
+      "impact": "Empowered youth and companies through role-based system"
+    },
+    {
+      "name": "TMDB Movie Streaming App",
+      "highlight": "Multi-language support & Firebase auth",
+      "role": "Frontend Developer",
+      "impact": "Created a dynamic content-rich movie streaming platform"
+    }
+  ],
+  "stats": {
+    "yearsExperience": 4,
+    "projectsCompleted": 25,
+    "clientsServed": 6,
+    "githubRepos": 30
+  },
+  "availability": {
+    "freelance": true,
+    "nextAvailable": "July 2025"
+  },
+  "resume": "https://yourwebsite.com/Ahmed-Sanadi-Resume.pdf",
+  "references": "Available upon request"
+}
