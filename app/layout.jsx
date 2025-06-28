@@ -1,6 +1,6 @@
 //app/layout.jsx
 import './globals.css';
-import { Inter } from 'next/font/google';
+import { Inter, Inria_Serif } from 'next/font/google';
 import Navigation from '@/components/layouts/Navigation';
 import Footer from '@/components/layouts/Footer';
 import ParticleBackground from '@/components/layouts/ParticleBackground';
@@ -11,6 +11,12 @@ const inter = Inter({
     display: 'swap',
 });
 
+const inriaSerif = Inria_Serif({
+    subsets: ['latin'],
+    weight: ['300', '400', '700'],
+    variable: '--font-inria-serif',
+    display: 'swap',
+});
 export const metadata = {
     title: 'Ahmed Al-Sanadi - Full-Stack Developer & Digital Solutions Expert',
     description:
@@ -55,20 +61,10 @@ export default function RootLayout({ children }) {
                     name="viewport"
                     content="width=device-width, initial-scale=1"
                 />
-                <link rel="icon" href="/favicon.ico" />
-                <link rel="preconnect" href="https://fonts.googleapis.com" />
-                <link
-                    rel="preconnect"
-                    href="https://fonts.gstatic.com"
-                    crossOrigin="anonymous"
-                />
-                <link
-                    href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300;400;700&display=swap"
-                    rel="stylesheet"
-                />
+                <link rel="icon" href="/favicon.ico" prefetch={false} />
             </head>
             <body
-                className={`${inter.variable} font-sans antialiased overflow-x-hidden`}>
+                className={`${inter.variable} ${inriaSerif.variable} font-sans antialiased overflow-x-hidden`}>
                 <div className="relative min-h-screen bg-[#030B15]">
                     <ParticleBackground />
                     <Navigation />
