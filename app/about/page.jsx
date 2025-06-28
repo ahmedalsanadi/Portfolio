@@ -1,6 +1,7 @@
 //app/about/page.jsx
 'use client';
 import Hero from '@/components/common/Hero';
+import StorySection from '@/components/common/StorySection';
 import { useInView } from 'react-intersection-observer';
 
 import {
@@ -43,10 +44,6 @@ const values = [
 ];
 
 export default function AboutPage() {
-    const { ref: storyRef, inView: storyInView } = useInView({
-        threshold: 0.1,
-        triggerOnce: true,
-    });
     const { ref: skillsRef, inView: skillsInView } = useInView({
         threshold: 0.1,
         triggerOnce: true,
@@ -73,47 +70,7 @@ export default function AboutPage() {
             />
 
             {/* Story Section */}
-            <section
-                ref={storyRef}
-                className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-gray-900/20">
-                <div className="max-w-4xl mx-auto">
-                    <div
-                        className={`${storyInView ? 'animate-in slide-in-from-bottom duration-1000' : 'opacity-0'}`}>
-                        <h2 className="heading-2 text-white mb-8 text-center">
-                            My Story
-                        </h2>
-
-                        <div className="prose prose-lg max-w-none">
-                            <p className="content-2 text-gray-300 mb-6 leading-relaxed">
-                                {personal.aboutMe}
-                            </p>
-
-                            <p className="content-2 text-gray-300 mb-6 leading-relaxed">
-                                With over {personal.stats.yearsExperience} years
-                                of experience in software development, I've had
-                                the privilege of working on diverse projects
-                                ranging from mobile applications to complex
-                                full-stack web solutions. My journey began with
-                                a curiosity about how technology can solve
-                                real-world problems, and it has evolved into a
-                                deep commitment to creating solutions that make
-                                a difference.
-                            </p>
-
-                            <p className="content-2 text-gray-300 leading-relaxed">
-                                I hold a {personal.education[0].degree} with{' '}
-                                {personal.education[0].honors}, achieving a CGPA
-                                of {personal.education[0].cgpa}. This academic
-                                foundation, combined with hands-on experience
-                                across {personal.stats.projectsCompleted}+
-                                projects, has equipped me with both theoretical
-                                knowledge and practical skills to tackle complex
-                                technical challenges.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <StorySection personal={personal} />
 
             {/* Values Section */}
             <section ref={valuesRef} className="py-20 px-4 sm:px-6 lg:px-8">

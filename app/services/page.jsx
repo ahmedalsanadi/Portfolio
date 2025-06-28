@@ -14,9 +14,7 @@ import {
     ArrowRight,
     CheckCircle,
     Star,
-    Clock,
     Users,
-    Award,
 } from 'lucide-react';
 import { services } from '@/lib/data';
 
@@ -268,7 +266,7 @@ export default function ServicesPage() {
 
                         <Link
                             href="/contact"
-                            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#00BBB1] to-[#00C4F4] text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-[#00BBB1]/25 transition-all duration-300 hover:scale-105">
+                            className="inline-flex mx-2 items-center px-8 py-4 bg-gradient-to-r from-[#00BBB1] to-[#00C4F4] text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-[#00BBB1]/25 transition-all duration-300 hover:scale-105">
                             <span>Get Free Consultation</span>
                             <ArrowRight className="ml-2 h-5 w-5" />
                         </Link>
