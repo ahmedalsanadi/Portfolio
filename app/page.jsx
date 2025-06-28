@@ -3,6 +3,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import Hero from '@/components/common/Hero';
 import Link from 'next/link';
 import {
     ArrowRight,
@@ -22,6 +23,7 @@ import {
 import { useInView } from 'react-intersection-observer';
 import { personal, services, stats, featuredProjects } from '@/lib/data';
 
+
 const iconMap = {
     Code: Code,
     Database: Database,
@@ -36,10 +38,7 @@ const iconMap = {
 };
 
 export default function HomePage() {
-    const { ref: heroRef, inView: heroInView } = useInView({
-        threshold: 0.1,
-        triggerOnce: true,
-    });
+
     const { ref: servicesRef, inView: servicesInView } = useInView({
         threshold: 0.1,
         triggerOnce: true,
@@ -54,134 +53,18 @@ export default function HomePage() {
     });
 
     return (
-        <div className="min-h-screen">
+        <div className="min-h-screen pt-2">
             {/* Hero Section */}
-            <section
-                ref={heroRef}
-                className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16">
-                <div className="max-w-7xl mx-auto mt-10">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                        {/* Content */}
-                        <div
-                            className={`space-y-8 ${heroInView ? 'animate-in slide-in-from-left duration-1000' : 'opacity-0'}`}>
-                            <div className="space-y-4">
-                                <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-[#00BBB1]/20 to-[#00C4F4]/20 rounded-full border border-[#00BBB1]/30">
-                                    <span className="text-[#00BBB1] text-sm font-medium">
-                                        👋 Hello, I'm{' '}
-                                        {personal.name.split(' ')[0]}
-                                    </span>
-                                </div>
-
-                                <h1 className="heading-1 text-white">
-                                    {personal.name
-                                        .split(' ')
-                                        .slice(0, 3)
-                                        .join(' ')}{' '}
-                                    <span className="text-gradient">
-                                        {personal.name.split(' ').slice(-1)[0]}
-                                    </span>
-                                </h1>
-
-                                <h2 className="heading-2 text-gray-300">
-                                    Full-Stack Developer &{' '}
-                                    <span className="text-[#00C4F4]">
-                                        Digital Solutions Expert
-                                    </span>
-                                </h2>
-
-                                <p className="content-3 text-gray-400 max-w-2xl">
-                                    {personal.summary}
-                                </p>
-                            </div>
-
-                            {/* CTA Buttons */}
-                            <div className="flex flex-col sm:flex-row gap-4">
-                                <Link
-                                    href="/portfolio"
-                                    className="group relative px-8 py-4 bg-gradient-to-r from-[#00BBB1] to-[#00C4F4] text-white font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-[#00BBB1]/25 hover:scale-105">
-                                    <span className="relative z-10 flex items-center justify-center space-x-2">
-                                        <span>View My Work</span>
-                                        <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                                    </span>
-                                    <div className="absolute inset-0 bg-gradient-to-r from-[#00C4F4] to-[#00BBB1] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                                </Link>
-
-                                <Link
-                                    href={personal.resume || '#'}
-                                    className="group px-8 py-4 border border-[#00BBB1] text-[#00BBB1] font-semibold rounded-lg transition-all duration-300 hover:bg-[#00BBB1] hover:text-white hover:shadow-lg hover:shadow-[#00BBB1]/25">
-                                    <span className="flex items-center justify-center space-x-2">
-                                        <Download className="h-5 w-5" />
-                                        <span>Download Resume</span>
-                                    </span>
-                                </Link>
-                            </div>
-
-                            {/* Quick Stats */}
-                            <div className="flex items-center space-x-6 pt-4">
-                                <div className="text-center">
-                                    <div className="text-2xl font-bold text-white">
-                                        {personal.stats.yearsExperience}+
-                                    </div>
-                                    <div className="text-sm text-gray-400">
-                                        Years
-                                    </div>
-                                </div>
-                                <div className="w-px h-12 bg-gray-700"></div>
-                                <div className="text-center">
-                                    <div className="text-2xl font-bold text-white">
-                                        {personal.stats.projectsCompleted}+
-                                    </div>
-                                    <div className="text-sm text-gray-400">
-                                        Projects
-                                    </div>
-                                </div>
-                                <div className="w-px h-12 bg-gray-700"></div>
-                                <div className="text-center">
-                                    <div className="text-2xl font-bold text-white">
-                                        {personal.stats.clientsServed}+
-                                    </div>
-                                    <div className="text-sm text-gray-400">
-                                        Clients
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Profile Image */}
-                        <div
-                            className={`relative ${heroInView ? 'animate-in slide-in-from-right duration-1000' : 'opacity-0'}`}>
-                            <div className="relative w-full max-w-lg mx-auto">
-                                <div className="aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-[#00BBB1]/20 to-[#00C4F4]/20 p-8">
-                                    <div className="w-full h-full bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl flex items-center justify-center relative overflow-hidden">
-                                        <div className="absolute inset-0 bg-gradient-to-br from-[#00BBB1]/10 to-[#00C4F4]/10"></div>
-                                        <div className="relative z-10 text-6xl font-bold text-white">
-                                            {personal.name.split(' ')[0][0]}
-                                            {
-                                                personal.name.split(' ')[
-                                                    personal.name.split(' ')
-                                                        .length - 1
-                                                ][0]
-                                            }
-                                        </div>
-                                        <div className="absolute -top-10 -right-10 w-32 h-32 bg-[#00BBB1]/20 rounded-full blur-3xl"></div>
-                                        <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-[#00C4F4]/20 rounded-full blur-3xl"></div>
-                                    </div>
-                                </div>
-
-                                {/* Floating Elements */}
-                                <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-r from-[#00BBB1] to-[#00C4F4] rounded-xl flex items-center justify-center animate-float">
-                                    <Code className="h-10 w-10 text-white" />
-                                </div>
-                                <div
-                                    className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-r from-[#00C4F4] to-[#00BBB1] rounded-lg flex items-center justify-center animate-float"
-                                    style={{ animationDelay: '1s' }}>
-                                    <Database className="h-8 w-8 text-white" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <Hero
+                variant="home"
+                personal={personal}
+                badgeText={`👋 Hello, I'm ${personal.name.split(' ')[0]}`}
+                title={`${personal.name.split(' ').slice(0, 3).join(' ')} `}
+                subtitle="Full-Stack Developer &"
+                description={personal.summary}
+                showStats={true}
+                showButtons={true}
+            />
 
             {/* Services Section */}
             <section ref={servicesRef} className="py-20 px-4 sm:px-6 lg:px-8">

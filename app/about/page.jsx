@@ -1,9 +1,9 @@
+//app/about/page.jsx
 'use client';
-
+import Hero from '@/components/common/Hero';
 import { useInView } from 'react-intersection-observer';
+
 import {
-    Calendar,
-    MapPin,
     Award,
     Code,
     Database,
@@ -43,10 +43,6 @@ const values = [
 ];
 
 export default function AboutPage() {
-    const { ref: heroRef, inView: heroInView } = useInView({
-        threshold: 0.1,
-        triggerOnce: true,
-    });
     const { ref: storyRef, inView: storyInView } = useInView({
         threshold: 0.1,
         triggerOnce: true,
@@ -67,123 +63,14 @@ export default function AboutPage() {
     return (
         <div className="min-h-screen pt-20">
             {/* Hero Section */}
-            <section ref={heroRef} className="py-20 px-4 sm:px-6 lg:px-8">
-                <div className="max-w-7xl mx-auto">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                        <div
-                            className={`space-y-8 ${heroInView ? 'animate-in slide-in-from-left duration-1000' : 'opacity-0'}`}>
-                            <div className="space-y-4">
-                                <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-[#00BBB1]/20 to-[#00C4F4]/20 rounded-full border border-[#00BBB1]/30">
-                                    <span className="text-[#00BBB1] text-sm font-medium">
-                                        👨‍💻 About Me
-                                    </span>
-                                </div>
-
-                                <h1 className="heading-1 text-white">
-                                    Passionate{' '}
-                                    <span className="text-gradient">
-                                        Full-Stack Developer
-                                    </span>
-                                </h1>
-
-                                <p className="content-2 text-gray-300">
-                                    Building meaningful digital products with
-                                    clean code, collaboration, and lifelong
-                                    learning
-                                </p>
-                            </div>
-
-                            {/* Quick Info */}
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <div className="flex items-center space-x-3">
-                                    <Calendar className="h-5 w-5 text-[#00BBB1]" />
-                                    <div>
-                                        <div className="text-sm text-gray-400">
-                                            Born
-                                        </div>
-                                        <div className="text-white font-medium">
-                                            {personal.dob}
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="flex items-center space-x-3">
-                                    <MapPin className="h-5 w-5 text-[#00BBB1]" />
-                                    <div>
-                                        <div className="text-sm text-gray-400">
-                                            Location
-                                        </div>
-                                        <div className="text-white font-medium">
-                                            {personal.address
-                                                .split(',')
-                                                .slice(-2)
-                                                .join(',')
-                                                .trim()}
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="flex items-center space-x-3">
-                                    <Award className="h-5 w-5 text-[#00BBB1]" />
-                                    <div>
-                                        <div className="text-sm text-gray-400">
-                                            Experience
-                                        </div>
-                                        <div className="text-white font-medium">
-                                            {personal.stats.yearsExperience}+
-                                            Years
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="flex items-center space-x-3">
-                                    <Globe className="h-5 w-5 text-[#00BBB1]" />
-                                    <div>
-                                        <div className="text-sm text-gray-400">
-                                            Languages
-                                        </div>
-                                        <div className="text-white font-medium">
-                                            {Object.keys(personal.languages)
-                                                .map(
-                                                    (lang) =>
-                                                        lang
-                                                            .charAt(0)
-                                                            .toUpperCase() +
-                                                        lang.slice(1),
-                                                )
-                                                .join(', ')}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Profile Image */}
-                        <div
-                            className={`relative ${heroInView ? 'animate-in slide-in-from-right duration-1000' : 'opacity-0'}`}>
-                            <div className="relative w-full max-w-lg mx-auto">
-                                <div className="aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-[#00BBB1]/20 to-[#00C4F4]/20 p-8">
-                                    <div className="w-full h-full bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl flex items-center justify-center relative overflow-hidden">
-                                        <div className="absolute inset-0 bg-gradient-to-br from-[#00BBB1]/10 to-[#00C4F4]/10"></div>
-                                        <div className="relative z-10 text-6xl font-bold text-white">
-                                            {personal.name.split(' ')[0][0]}
-                                            {
-                                                personal.name.split(' ')[
-                                                    personal.name.split(' ')
-                                                        .length - 1
-                                                ][0]
-                                            }
-                                        </div>
-                                        <div className="absolute -top-10 -right-10 w-32 h-32 bg-[#00BBB1]/20 rounded-full blur-3xl animate-pulse-slow"></div>
-                                        <div
-                                            className="absolute -bottom-10 -left-10 w-32 h-32 bg-[#00C4F4]/20 rounded-full blur-3xl animate-pulse-slow"
-                                            style={{
-                                                animationDelay: '1.5s',
-                                            }}></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <Hero
+                variant="about"
+                personal={personal}
+                badgeText="👨‍💻 About Me"
+                title="Passionate"
+                description="Building meaningful digital products with clean code, collaboration, and lifelong learning"
+                showQuickInfo={true}
+            />
 
             {/* Story Section */}
             <section
