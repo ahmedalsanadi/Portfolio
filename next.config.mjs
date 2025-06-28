@@ -4,7 +4,7 @@ const nextConfig = {
         ignoreDuringBuilds: true,
     },
     experimental: {
-        optimizePackageImports: ['sharp'],
+        optimizePackageImports: ['sharp', 'lucide-react'],
     },
     images: { unoptimized: true },
 };

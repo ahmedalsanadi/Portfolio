@@ -59,7 +59,7 @@ export default function HomePage() {
             <section
                 ref={heroRef}
                 className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16">
-                <div className="max-w-7xl mx-auto">
+                <div className="max-w-7xl mx-auto mt-10">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         {/* Content */}
                         <div
