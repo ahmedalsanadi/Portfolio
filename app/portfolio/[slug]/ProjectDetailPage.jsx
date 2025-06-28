@@ -8,6 +8,7 @@ import {
     ExternalLink,
     ChevronLeft,
     ChevronRight,
+    Code,
 } from 'lucide-react';
 import { useState } from 'react';
 
