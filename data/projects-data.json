@@ -12,8 +12,14 @@
         "i18next"
       ],
       "screenshots": [
-        "https://raw.githubusercontent.com/ahmedalsanadi/Movie-Streaming-App/refs/heads/dev/screenshots/image-1.png",
-        "https://raw.githubusercontent.com/ahmedalsanadi/Movie-Streaming-App/refs/heads/dev/screenshots/image.png"
+        "/images/mockups/Untitled design (4).png",
+        "/images/projects/movie-streaming/main.png",
+        "/images/projects/movie-streaming/image-1.png",
+        "/images/projects/movie-streaming/image-2.png",
+        "/images/projects/movie-streaming/image-3.png",
+        "/images/projects/movie-streaming/image-5.png",
+        "/images/projects/movie-streaming/image-8.png",
+        "/images/projects/movie-streaming/image.png"
       ],
       "github": "https://github.com/ahmedalsanadi/Movie-Streaming-App",
       "deployment": "https://movie-streaming-app-virid.vercel.app/"
@@ -29,7 +35,14 @@
         "Tailwind CSS",
         "Shadcn/ui"
       ],
-      "screenshots": null,
+      "screenshots": [
+        "/images/projects/car-rental/1.png",
+        "/images/projects/car-rental/2.png",
+        "/images/projects/car-rental/3.png",
+        "/images/projects/car-rental/4.png",
+        "/images/projects/car-rental/5.png",
+        "/images/projects/car-rental/6.png"
+      ],
       "github": "https://github.com/ahmedalsanadi/car-rental",
       "deployment": "https://car-rental-psi-nine.vercel.app/"
     },
@@ -47,9 +60,14 @@
         "React Icons"
       ],
       "screenshots": [
-        "https://raw.githubusercontent.com/ahmedalsanadi/FinBiz/refs/heads/main/screenshots/hero.png",
-        "https://raw.githubusercontent.com/ahmedalsanadi/FinBiz/refs/heads/main/screenshots/charts.png",
-        "https://raw.githubusercontent.com/ahmedalsanadi/FinBiz/refs/heads/main/screenshots/cards.png"
+        "/images/mockups/Untitled design (3).png",
+        "/images/projects/finBiz/11.png",
+        "/images/projects/finBiz/main.png",
+        "/images/projects/finBiz/1.png",
+        "/images/projects/finBiz/2.png",
+        "/images/projects/finBiz/4.png",
+        "/images/projects/finBiz/7.png",
+        "/images/projects/finBiz/8.png"
       ],
       "github": "https://github.com/ahmedalsanadi/FinBiz",
       "deployment": "https://main--finbiz-al-sanadi.netlify.app/"

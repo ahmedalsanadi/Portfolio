@@ -23,7 +23,6 @@ import {
 import { useInView } from 'react-intersection-observer';
 import { personal, services, stats, featuredProjects } from '@/lib/data';
 
-
 const iconMap = {
     Code: Code,
     Database: Database,
@@ -38,7 +37,6 @@ const iconMap = {
 };
 
 export default function HomePage() {
-
     const { ref: servicesRef, inView: servicesInView } = useInView({
         threshold: 0.1,
         triggerOnce: true,
@@ -201,17 +199,19 @@ export default function HomePage() {
                                                 ))}
                                     </div>
 
-                                    <h3 className="heading-3 text-white mb-2">
+                                    <h3 className="heading-3 text-white mb-1">
                                         {project.name}
                                     </h3>
+                                    {project.featured && (
                                     <p className="content-3 text-gray-400 mb-4">
-                                        {project.description ||
-                                            project.min_desc}
+                                        {project.min_desc}
                                     </p>
+                                    )}
+
 
                                     <Link
                                         href={`/portfolio/${project.name.toLowerCase().replace(/\s+/g, '-')}`}
-                                        className="text-[#00BBB1] font-medium flex items-center space-x-1 group-hover:text-[#00C4F4] transition-colors">
+                                        className="text-[#00BBB1] font-medium flex items-center space-x-1 group-hover:text-[#00C4F4] transition-colors mt-auto">
                                         <span>View Project</span>
                                         <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                                     </Link>

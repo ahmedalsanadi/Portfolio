@@ -124,7 +124,7 @@ export default function ProjectDetailPage({ project }) {
                                                 ]
                                             }
                                             alt={`${project.name} screenshot ${currentImageIndex + 1}`}
-                                            className="w-full h-full object-cover"
+                                            className="w-full h-full object-cover "
                                         />
                                     </div>
 
