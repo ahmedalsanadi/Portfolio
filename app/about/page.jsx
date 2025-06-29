@@ -67,6 +67,7 @@ export default function AboutPage() {
                 title="Passionate"
                 description="Building meaningful digital products with clean code, collaboration, and lifelong learning"
                 showQuickInfo={true}
+                showProfileInitials={false}
             />
 
             {/* Story Section */}

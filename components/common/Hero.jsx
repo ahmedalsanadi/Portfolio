@@ -9,7 +9,7 @@ import {
     ArrowRight,
     Download,
     Code,
-    Database
+    Database,
 } from 'lucide-react';
 
 export default function Hero({
@@ -65,7 +65,7 @@ export default function Hero({
                             </h1>
 
                             {variant === 'home' ? (
-                                <h2 className="heading-2 text-gray-300">
+                                <h2 className="heading-3 text-gray-300">
                                     {subtitle}{' '}
                                     <span className="text-[#00C4F4]">
                                         Digital Solutions Expert
@@ -73,7 +73,7 @@ export default function Hero({
                                 </h2>
                             ) : null}
 
-                            <p className="content-2 text-gray-300">
+                            <p className="content-3 text-gray-300">
                                 {description}
                             </p>
                         </div>
@@ -207,7 +207,7 @@ export default function Hero({
                                 <div className="w-full h-full bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl flex items-center justify-center relative overflow-hidden">
                                     <div
                                         className={`absolute inset-0 bg-gradient-to-br ${gradientFrom}/10 ${gradientTo}/10`}></div>
-                                    {showProfileInitials && (
+                                    {showProfileInitials ? (
                                         <div className="relative z-10 text-6xl font-bold text-white">
                                             {personal.name.split(' ')[0][0]}
                                             {
@@ -217,6 +217,12 @@ export default function Hero({
                                                 ][0]
                                             }
                                         </div>
+                                    ) : (
+                                        <img
+                                            src="/images/personal/profile.jpg"
+                                            alt="Profile"
+                                            className="w-full h-full object-cover relative z-10"
+                                        />
                                     )}
                                     <div className="absolute -top-10 -right-10 w-32 h-32 bg-[#00BBB1]/20 rounded-full blur-3xl animate-pulse-slow"></div>
                                     <div
