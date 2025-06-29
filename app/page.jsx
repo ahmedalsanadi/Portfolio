@@ -59,7 +59,7 @@ export default function HomePage() {
                 badgeText={`👋 Hello, I'm ${personal.name.split(' ')[0]}`}
                 title={`${personal.name.split(' ').slice(0, 3).join(' ')} `}
                 subtitle="Full-Stack Developer &"
-                description="Full-stack developer with 4+ years of experience crafting clean, scalable solutions—passionate about innovation, problem-solving, and building products that make an impact"
+                description="Over 4+ years of experience crafting clean, scalable solutions—passionate about innovation, problem-solving, and building products that make an impact"
                 showStats={true}
                 showButtons={true}
                 showProfileInitials={false}

@@ -65,7 +65,7 @@ export default function AboutPage() {
                 personal={personal}
                 badgeText="👨‍💻 About Me"
                 title="Passionate"
-                description="Building meaningful digital products with clean code, collaboration, and lifelong learning"
+                description={personal.summary}
                 showQuickInfo={true}
                 showProfileInitials={false}
             />

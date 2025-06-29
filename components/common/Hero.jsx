@@ -34,8 +34,10 @@ export default function Hero({
     const gradientTo = 'to-[#00C4F4]';
 
     return (
-        <section ref={ref} className="py-20 px-4 sm:px-6 lg:px-8">
-            <div className="max-w-7xl mx-auto">
+        <section
+            ref={ref}
+            className={`${variant === 'home' ? 'md:mt-8 py-20' : 'mt-0 py-10'}`}>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     {/* Content */}
                     <div
@@ -51,7 +53,7 @@ export default function Hero({
                                 </div>
                             )}
 
-                            <h1 className="heading-1 text-white">
+                            <h1 className="text-3xl md:heading-1 text-white">
                                 {title}{' '}
                                 {variant === 'home' ? (
                                     <span className="text-gradient">
@@ -219,7 +221,7 @@ export default function Hero({
                                         </div>
                                     ) : (
                                         <img
-                                            src="/images/personal/profile.jpg"
+                                            src="/images/personal/profile-3.png"
                                             alt="Profile"
                                             className="w-full h-full object-cover relative z-10"
                                         />
