@@ -61,7 +61,7 @@ export default function RootLayout({ children }) {
                     name="viewport"
                     content="width=device-width, initial-scale=1"
                 />
-                <link rel="icon" href="/favicon.ico" prefetch={false} />
+                <link rel="icon" href="/favicon.ico"  />
             </head>
             <body
                 className={`${inter.variable} ${inriaSerif.variable} font-sans antialiased overflow-x-hidden`}>

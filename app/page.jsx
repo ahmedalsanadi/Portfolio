@@ -22,6 +22,7 @@ import {
 } from 'lucide-react';
 import { useInView } from 'react-intersection-observer';
 import { personal, services, stats, featuredProjects } from '@/lib/data';
+import FeaturedProjects from '@/components/common/FeaturedProjects';
 
 const iconMap = {
     Code: Code,
@@ -38,10 +39,6 @@ const iconMap = {
 
 export default function HomePage() {
     const { ref: servicesRef, inView: servicesInView } = useInView({
-        threshold: 0.1,
-        triggerOnce: true,
-    });
-    const { ref: projectsRef, inView: projectsInView } = useInView({
         threshold: 0.1,
         triggerOnce: true,
     });
@@ -133,104 +130,7 @@ export default function HomePage() {
             </section>
 
             {/* Featured Projects Section */}
-            <section
-                ref={projectsRef}
-                className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-gray-900/20">
-                <div className="max-w-7xl mx-auto">
-                    <div
-                        className={`flex items-center justify-between mb-16 ${projectsInView ? 'animate-in slide-in-from-bottom duration-1000' : 'opacity-0'}`}>
-                        <div>
-                            <h2 className="heading-2 text-white mb-4">
-                                Latest Works
-                            </h2>
-                            <p className="content-3 text-gray-400">
-                                Featured projects showcasing innovation and
-                                technical excellence
-                            </p>
-                        </div>
-
-                        {/* Interactive Chart */}
-                        <div className="hidden lg:block">
-                            <div className="w-64 h-32 bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-lg p-4 border border-gray-700">
-                                <div className="flex items-end justify-between h-full space-x-1">
-                                    {[40, 65, 45, 80, 55, 90, 70].map(
-                                        (height, index) => (
-                                            <div
-                                                key={index}
-                                                className="bg-gradient-to-t from-[#00BBB1] to-[#00C4F4] rounded-sm flex-1 transition-all duration-500 hover:opacity-80"
-                                                style={{ height: `${height}%` }}
-                                            />
-                                        ),
-                                    )}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                        {featuredProjects.map((project, index) => (
-                            <div
-                                key={project.name}
-                                className={`group relative overflow-hidden rounded-xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700 hover:border-[#00BBB1]/50 transition-all duration-500 ${
-                                    project.featured
-                                        ? 'lg:col-span-2 lg:row-span-2'
-                                        : ''
-                                } ${projectsInView ? 'animate-in slide-in-from-bottom duration-1000' : 'opacity-0'}`}
-                                style={{ animationDelay: `${index * 200}ms` }}>
-                                <div className="aspect-video overflow-hidden">
-                                    <img
-                                        src={project.image}
-                                        alt={project.name}
-                                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
-                                </div>
-
-                                <div className="absolute bottom-0 left-0 right-0 p-6">
-                                    <div className="flex flex-wrap gap-2 mb-3">
-                                        {project.techs &&
-                                            project.techs
-                                                .slice(0, 3)
-                                                .map((tech) => (
-                                                    <span
-                                                        key={tech}
-                                                        className="px-2 py-1 bg-[#00BBB1]/20 text-[#00BBB1] text-xs rounded-full border border-[#00BBB1]/30">
-                                                        {tech}
-                                                    </span>
-                                                ))}
-                                    </div>
-
-                                    <h3 className="heading-3 text-white mb-1">
-                                        {project.name}
-                                    </h3>
-                                    {project.featured && (
-                                    <p className="content-3 text-gray-400 mb-4">
-                                        {project.min_desc}
-                                    </p>
-                                    )}
-
-
-                                    <Link
-                                        href={`/portfolio/${project.name.toLowerCase().replace(/\s+/g, '-')}`}
-                                        className="text-[#00BBB1] font-medium flex items-center space-x-1 group-hover:text-[#00C4F4] transition-colors mt-auto">
-                                        <span>View Project</span>
-                                        <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                                    </Link>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-
-                    <div className="text-center mt-12">
-                        <Link
-                            href="/portfolio"
-                            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#00BBB1] to-[#00C4F4] text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-[#00BBB1]/25 transition-all duration-300 hover:scale-105">
-                            <span>View Full Portfolio</span>
-                            <ArrowRight className="ml-2 h-5 w-5" />
-                        </Link>
-                    </div>
-                </div>
-            </section>
+            <FeaturedProjects />
 
             {/* Statistics Section */}
             <section
