@@ -17,6 +17,7 @@ import {
     Users,
 } from 'lucide-react';
 import { services } from '@/lib/data';
+import ProcessSection from '@/components/sections/ProcessSection';
 
 const iconMap = {
     Code: Code,
@@ -29,47 +30,12 @@ const iconMap = {
     Sparkles: Sparkles,
 };
 
-const processSteps = [
-    {
-        step: '01',
-        title: 'Consultation',
-        description:
-            'We discuss your project requirements, goals, and vision to create a comprehensive plan.',
-        icon: Users,
-    },
-    {
-        step: '02',
-        title: 'Development',
-        description:
-            'Agile development process with regular updates and milestones to ensure quality delivery.',
-        icon: Code,
-    },
-    {
-        step: '03',
-        title: 'Testing',
-        description:
-            'Rigorous testing across all devices and browsers to ensure optimal performance and reliability.',
-        icon: Shield,
-    },
-    {
-        step: '04',
-        title: 'Deployment',
-        description:
-            'Seamless deployment and launch with ongoing support and maintenance as needed.',
-        icon: Zap,
-    },
-];
-
 export default function ServicesPage() {
     const { ref: heroRef, inView: heroInView } = useInView({
         threshold: 0.1,
         triggerOnce: true,
     });
     const { ref: servicesRef, inView: servicesInView } = useInView({
-        threshold: 0.1,
-        triggerOnce: true,
-    });
-    const { ref: processRef, inView: processInView } = useInView({
         threshold: 0.1,
         triggerOnce: true,
     });
@@ -211,68 +177,7 @@ export default function ServicesPage() {
             </section>
 
             {/* Process Section */}
-            <section ref={processRef} className="py-20 px-4 sm:px-6 lg:px-8">
-                <div className="max-w-7xl mx-auto">
-                    <div
-                        className={`text-center mb-16 ${processInView ? 'animate-in slide-in-from-bottom duration-1000' : 'opacity-0'}`}>
-                        <h2 className="heading-2 text-white mb-4">
-                            Development Process
-                        </h2>
-                        <p className="content-3 text-gray-400 max-w-2xl mx-auto">
-                            A streamlined approach that ensures quality delivery
-                            and client satisfaction at every step
-                        </p>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        {processSteps.map((step, index) => (
-                            <div
-                                key={step.step}
-                                className={`group text-center ${processInView ? 'animate-in slide-in-from-bottom duration-1000' : 'opacity-0'}`}
-                                style={{ animationDelay: `${index * 200}ms` }}>
-                                <div className="relative mb-6">
-                                    <div className="w-20 h-20 bg-gradient-to-r from-[#00BBB1] to-[#00C4F4] rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
-                                        <step.icon className="h-8 w-8 text-white" />
-                                    </div>
-
-                                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-gray-900 border-2 border-[#00BBB1] rounded-full flex items-center justify-center">
-                                        <span className="text-xs font-bold text-[#00BBB1]">
-                                            {step.step}
-                                        </span>
-                                    </div>
-
-                                    <div className="absolute inset-0 bg-gradient-to-r from-[#00BBB1] to-[#00C4F4] rounded-full blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
-                                </div>
-
-                                <h3 className="heading-3 text-white mb-4 group-hover:text-[#00BBB1] transition-colors duration-300">
-                                    {step.title}
-                                </h3>
-
-                                <p className="content-3 text-gray-400">
-                                    {step.description}
-                                </p>
-                            </div>
-                        ))}
-                    </div>
-
-                    {/* CTA Section */}
-                    <div className="text-center mt-16">
-                        <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-[#00BBB1]/20 to-[#00C4F4]/20 rounded-full border border-[#00BBB1]/30 mb-6">
-                            <Star className="h-5 w-5 text-[#00BBB1] mr-2" />
-                            <span className="text-[#00BBB1] font-medium">
-                                Ready to start your project?
-                            </span>
-                        </div>
-
-                        <Link
-                            href="/contact"
-                            className="inline-flex mx-2 items-center px-8 py-4 bg-gradient-to-r from-[#00BBB1] to-[#00C4F4] text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-[#00BBB1]/25 transition-all duration-300 hover:scale-105">
-                            <span>Get Free Consultation</span>
-                            <ArrowRight className="ml-2 h-5 w-5" />
-                        </Link>
-                    </div>
-                </div>
-            </section>
+            <ProcessSection />
         </div>
     );
 }

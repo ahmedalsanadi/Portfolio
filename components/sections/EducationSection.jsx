@@ -1,3 +1,4 @@
+'use client';
 import { useInView } from 'react-intersection-observer';
 import { GraduationCap, Award, BookOpen } from 'lucide-react';
 
