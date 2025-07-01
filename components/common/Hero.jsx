@@ -190,7 +190,11 @@ export default function Hero({
 
                                 <a
                                     href={personal.resume || '#'}
-                                    className="group px-8 py-4 border border-[#00BBB1] text-[#00BBB1] font-semibold rounded-lg transition-all duration-300 hover:bg-[#00BBB1] hover:text-white hover:shadow-lg hover:shadow-[#00BBB1]/25">
+                                    className="group px-8 py-4 border border-[#00BBB1] text-[#00BBB1] font-semibold rounded-lg transition-all duration-300 hover:bg-[#00BBB1] hover:text-white hover:shadow-lg hover:shadow-[#00BBB1]/25"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                   
+                                    >
                                     <span className="flex items-center justify-center space-x-2">
                                         <Download className="h-5 w-5" />
                                         <span>Download Resume</span>
