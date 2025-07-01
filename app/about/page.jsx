@@ -5,7 +5,6 @@ import StorySection from '@/components/common/StorySection';
 import { useInView } from 'react-intersection-observer';
 
 import {
-    Award,
     Code,
     Database,
     Smartphone,
@@ -15,6 +14,7 @@ import {
     Heart,
 } from 'lucide-react';
 import { personal, skills } from '@/lib/data';
+import EducationSection from '@/components/common/EducationSection';
 
 const values = [
     {
@@ -45,10 +45,6 @@ const values = [
 
 export default function AboutPage() {
     const { ref: skillsRef, inView: skillsInView } = useInView({
-        threshold: 0.1,
-        triggerOnce: true,
-    });
-    const { ref: educationRef, inView: educationInView } = useInView({
         threshold: 0.1,
         triggerOnce: true,
     });
@@ -224,71 +220,12 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            {/* Education Section */}
-            <section ref={educationRef} className="py-20 px-4 sm:px-6 lg:px-8">
-                <div className="max-w-4xl mx-auto">
-                    <div
-                        className={`text-center mb-16 ${educationInView ? 'animate-in slide-in-from-bottom duration-1000' : 'opacity-0'}`}>
-                        <h2 className="heading-2 text-white mb-4">Education</h2>
-                        <p className="content-3 text-gray-400">
-                            Academic foundation that shaped my technical
-                            expertise
-                        </p>
-                    </div>
-
-                    <div className="space-y-8">
-                        {personal.education.map((edu, index) => (
-                            <div
-                                key={edu.degree}
-                                className={`group relative p-8 bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-xl border border-gray-700 hover:border-[#00BBB1]/50 transition-all duration-500 ${
-                                    educationInView
-                                        ? 'animate-in slide-in-from-bottom duration-1000'
-                                        : 'opacity-0'
-                                }`}
-                                style={{ animationDelay: `${index * 300}ms` }}>
-                                <div className="absolute inset-0 bg-gradient-to-br from-[#00BBB1]/5 to-[#00C4F4]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-
-                                <div className="relative z-10">
-                                    <div className="flex items-start justify-between mb-4">
-                                        <div className="flex-1">
-                                            <h3 className="heading-3 text-white mb-2 group-hover:text-[#00BBB1] transition-colors duration-300">
-                                                {edu.degree}
-                                            </h3>
-                                            {edu.institution && (
-                                                <p className="content-3 text-[#00C4F4] mb-2">
-                                                    {edu.institution}
-                                                </p>
-                                            )}
-                                            <p className="content-3 text-gray-400">
-                                                {edu.graduationDate}
-                                            </p>
-                                        </div>
-
-                                        <div className="text-right">
-                                            <div className="content-2 text-white font-semibold">
-                                                {edu.grade}
-                                            </div>
-                                            {edu.cgpa && (
-                                                <div className="text-sm text-gray-400">
-                                                    CGPA: {edu.cgpa}
-                                                </div>
-                                            )}
-                                            {edu.honors && (
-                                                <div className="inline-flex items-center px-3 py-1 mt-2 bg-gradient-to-r from-[#00BBB1]/20 to-[#00C4F4]/20 rounded-full border border-[#00BBB1]/30">
-                                                    <Award className="h-4 w-4 text-[#00BBB1] mr-2" />
-                                                    <span className="text-[#00BBB1] text-sm font-medium">
-                                                        {edu.honors}
-                                                    </span>
-                                                </div>
-                                            )}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
+            {/* Education & Courses Section */}
+            <EducationSection
+                educationData={personal.education}
+                coursesData={personal.courses}
+                achievementsData={personal.achievements}
+                />
         </div>
     );
 }
