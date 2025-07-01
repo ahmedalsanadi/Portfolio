@@ -10,7 +10,7 @@ import {
     Briefcase,
 } from 'lucide-react';
 import { personal } from '@/lib/data';
-import EducationSection from '@/components/common/EducationSection';
+import EducationSection from '@/components/sections/EducationSection';
 
 export default function ExperiencePage() {
     const { ref: heroRef, inView: heroInView } = useInView({
