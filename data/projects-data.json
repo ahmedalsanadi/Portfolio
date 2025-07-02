@@ -61,15 +61,43 @@
       ],
       "screenshots": [
         "/images/mockups/finbiz-mockup.png",
-        "/images/projects/finBiz/main.png",
         "/images/projects/finBiz/1.png",
         "/images/projects/finBiz/2.png",
+        "/images/projects/finBiz/3.png",
         "/images/projects/finBiz/4.png",
+        "/images/projects/finBiz/5.png",
+        "/images/projects/finBiz/6.png",
         "/images/projects/finBiz/7.png",
         "/images/projects/finBiz/8.png"
       ],
       "github": "https://github.com/ahmedalsanadi/FinBiz",
       "deployment": "https://main--finbiz-al-sanadi.netlify.app/"
+    },
+    {
+      "name": "Mosnad Platform",
+      "min_desc": "Mosnad Platform bridges the gap between Yemeni talents and employers, empowering individuals to grow in their careers while supporting companies in hiring qualified talent through a trusted and streamlined process",
+      "description": "A training platform that connects companies and employees with a comprehensive dashboard. Highlights the platform's value through company logos and key features.",
+      "techs": [
+        "Laravel",
+        "PHP",
+        "Sanctum API",
+        "MySQL",
+        "React",
+        "Next.js",
+        "JavaScript",
+        "Tailwind CSS",
+        "Git",
+        "GitHub",
+        "VS Code",
+        "Figma"
+      ],
+      "screenshots": [
+        "/images/mockups/mosnad-mockup.png",
+        "/images/projects/mosnad-platform/1.png",
+        "/images/projects/mosnad-platform/2.png"
+      ],
+      "github": "https://github.com/Mosnad-Web01/mosnad-platform",
+      "deployment": null
     },
     {
       "name": "Twitter App",
@@ -84,8 +112,11 @@
         "MongoDB"
       ],
       "screenshots": [
-        "https://private-user-images.githubusercontent.com/76667739/373466655-f218d528-fff2-457c-a461-dfe433dca8c9.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTA5NzUzNDMsIm5iZiI6MTc1MDk3NTA0MywicGF0aCI6Ii83NjY2NzczOS8zNzM0NjY2NTUtZjIxOGQ1MjgtZmZmMi00NTdjLWE0NjEtZGZlNDMzZGNhOGM5LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MjYlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjI2VDIxNTcyM1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTA0MWUzNWQ3YTU0ZjU1OGZlMzE1YmNlMjE0MGViZTY2NGRkZDY1MzU0MDg5YjJmMzM3N2UzNTMyZmIxZTBiOTkmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.lm9gkeXcFCxuoEZHCcbJOJOXl5BUBH0_-8v9VpqzGJ0",
-        "https://private-user-images.githubusercontent.com/76667739/373466344-4964ae58-97ff-4828-a012-b468ffdf9b13.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTA5NzUzNDMsIm5iZiI6MTc1MDk3NTA0MywicGF0aCI6Ii83NjY2NzczOS8zNzM0NjYzNDQtNDk2NGFlNTgtOTdmZi00ODI4LWEwMTItYjQ2OGZmZGY5YjEzLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MjYlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjI2VDIxNTcyM1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTU3OGE1Y2I4NGRkZGI5M2EyM2E2MWM4YjhjM2M3NjVjNzRlMzdiY2NmYzg3YzJmOWExZGQ2YWUxNGU5MjgxNDAmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.qwJBd_ECbsA3pMewqM0kN8qrEMx2IpIP4vU8YXjbtBk"
+        "/images/projects/twitter/1.png",
+        "/images/projects/twitter/2.png",
+        "/images/projects/twitter/3.png",
+        "/images/projects/twitter/4.png",
+        "/images/projects/twitter/5.png"
       ],
       "github": "https://github.com/ahmedalsanadi/twitter-app",
       "deployment": "https://twitter-2n7ic2inc-ahmedalsanadis-projects.vercel.app/"
@@ -101,9 +132,15 @@
         "MySQL"
       ],
       "screenshots": [
-        "https://raw.githubusercontent.com/ahmedalsanadi/Pixel-Job-App-Site/refs/heads/main/screenshots/hero.png",
-        "https://raw.githubusercontent.com/ahmedalsanadi/Pixel-Job-App-Site/refs/heads/main/screenshots/hover.png",
-        "https://raw.githubusercontent.com/ahmedalsanadi/Pixel-Job-App-Site/refs/heads/main/screenshots/show-apply.png"
+        "/images/projects/pixel-jobs/main.png",
+        "/images/mockups/jobPosting.png",
+        "/images/projects/pixel-jobs/2.png",
+        "/images/projects/pixel-jobs/3.png",
+        "/images/projects/pixel-jobs/4.png",
+        "/images/projects/pixel-jobs/5.png",
+        "/images/projects/pixel-jobs/6.png",
+        "/images/projects/pixel-jobs/7.png",
+        "/images/projects/pixel-jobs/8.png"
       ],
       "github": "https://github.com/ahmedalsanadi/Pixel-Job-App-Site",
       "deployment": null
@@ -118,7 +155,11 @@
         "JavaScript"
       ],
       "screenshots": [
-        "https://raw.githubusercontent.com/ahmedalsanadi/Biccas-Landing-Page-Ahmed-Al-Sanadi/refs/heads/main/screenshots/landing.png"
+        "/images/projects/biccas/6.png",
+        "/images/projects/biccas/3.png",
+        "/images/projects/biccas/4.png",
+        "/images/projects/biccas/main.png",
+        "/images/projects/biccas/5.png"
       ],
       "github": "https://github.com/ahmedalsanadi/Biccas-Landing-Page-Ahmed-Al-Sanadi",
       "deployment": "https://ahmedalsanadi.github.io/Biccas-Landing-Page-Ahmed-Al-Sanadi/"

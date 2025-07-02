@@ -427,6 +427,16 @@ function getProjectFeatures(projectName) {
             'Next.js 15 features',
             'Performance optimization',
         ],
+        'Mosnad Platform': [
+            'Comprehensive dashboard',
+            'Course & user management',
+            'Multi-language support',
+            'SEO optimization',
+            'Advanced security system',
+            'Responsive design',
+            'Laravel backend',
+            'MySQL database',
+        ],
         'Twitter App': [
             'Social media functionality',
             'Real-time interactions',
