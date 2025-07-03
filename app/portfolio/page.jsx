@@ -7,7 +7,6 @@ import Link from 'next/link';
 import {
     Github,
     ExternalLink,
-    Filter,
     Search,
     ArrowRight,
     Code,
@@ -16,6 +15,7 @@ import {
     Globe,
 } from 'lucide-react';
 import { projects } from '@/lib/data';
+import Image from 'next/image';
 
 const categories = [
     { name: 'All', value: 'all', icon: Globe },
@@ -168,10 +168,14 @@ export default function PortfolioPage() {
                                 <div className="aspect-video overflow-hidden">
                                     {project.screenshots &&
                                     project.screenshots[0] ? (
-                                        <img
+                                        <Image
                                             src={project.screenshots[0]}
                                             alt={project.name}
+                                            width={800}
+                                            height={450}
+                                            quality={90}
                                             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                            priority={index < 3} // Prioritize loading first 3 images
                                         />
                                     ) : (
                                         <div className="w-full h-full bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center">
@@ -180,7 +184,6 @@ export default function PortfolioPage() {
                                     )}
                                     <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
                                 </div>
-
                                 {/* Project Content */}
                                 <div className="relative z-10 p-6">
                                     {/* Technologies */}

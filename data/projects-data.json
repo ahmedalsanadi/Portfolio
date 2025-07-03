@@ -13,13 +13,15 @@
       ],
       "screenshots": [
         "/images/mockups/movie-mockup.png",
-        "/images/projects/movie-streaming/main.png",
-        "/images/projects/movie-streaming/image-1.png",
-        "/images/projects/movie-streaming/image-2.png",
-        "/images/projects/movie-streaming/image-3.png",
-        "/images/projects/movie-streaming/image-5.png",
-        "/images/projects/movie-streaming/image-8.png",
-        "/images/projects/movie-streaming/image.png"
+        "/images/projects/movie-streaming/1.jpg",
+        "/images/projects/movie-streaming/2.webp",
+        "/images/projects/movie-streaming/8.webp",
+        "/images/projects/movie-streaming/3.webp",
+        "/images/projects/movie-streaming/4.webp",
+        "/images/projects/movie-streaming/5.webp",
+        "/images/projects/movie-streaming/6.webp",
+        "/images/projects/movie-streaming/7.webp",
+        "/images/projects/movie-streaming/image-1.webp"
       ],
       "github": "https://github.com/ahmedalsanadi/Movie-Streaming-App",
       "deployment": "https://movie-streaming-app-virid.vercel.app/"
@@ -36,9 +38,9 @@
         "Shadcn/ui"
       ],
       "screenshots": [
+        "/images/projects/car-rental/3.png",
         "/images/projects/car-rental/1.png",
         "/images/projects/car-rental/2.png",
-        "/images/projects/car-rental/3.png",
         "/images/projects/car-rental/4.png",
         "/images/projects/car-rental/5.png",
         "/images/projects/car-rental/6.png"
@@ -112,7 +114,7 @@
         "MongoDB"
       ],
       "screenshots": [
-        "/images/projects/twitter/1.png",
+        "/images/projects/twitter/1.jpg",
         "/images/projects/twitter/2.png",
         "/images/projects/twitter/3.png",
         "/images/projects/twitter/4.png",
@@ -155,10 +157,10 @@
         "JavaScript"
       ],
       "screenshots": [
-        "/images/projects/biccas/6.png",
+        "/images/projects/biccas/1.png",
+        "/images/projects/biccas/2.png",
         "/images/projects/biccas/3.png",
         "/images/projects/biccas/4.png",
-        "/images/projects/biccas/main.png",
         "/images/projects/biccas/5.png"
       ],
       "github": "https://github.com/ahmedalsanadi/Biccas-Landing-Page-Ahmed-Al-Sanadi",

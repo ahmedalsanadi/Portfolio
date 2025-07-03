@@ -11,6 +11,7 @@ import {
     Code,
 } from 'lucide-react';
 import { useState } from 'react';
+import Image from 'next/image';
 
 export default function ProjectDetailPage({ project }) {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -39,7 +40,6 @@ export default function ProjectDetailPage({ project }) {
             );
         }
     };
-
     return (
         <div className="min-h-screen pt-20">
             {/* Back Button */}
@@ -56,7 +56,11 @@ export default function ProjectDetailPage({ project }) {
             <section ref={heroRef} className="px-4 sm:px-6 lg:px-8 pb-20">
                 <div className="max-w-7xl mx-auto">
                     <div
-                        className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${heroInView ? 'animate-in slide-in-from-bottom duration-1000' : 'opacity-0'}`}>
+                        className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
+                            heroInView
+                                ? 'animate-in slide-in-from-bottom duration-1000'
+                                : 'opacity-0'
+                        }`}>
                         {/* Project Info */}
                         <div className="space-y-8">
                             <div>
@@ -117,14 +121,20 @@ export default function ProjectDetailPage({ project }) {
                             project.screenshots.length > 0 ? (
                                 <div className="relative">
                                     <div className="aspect-video overflow-hidden rounded-xl bg-gradient-to-br from-gray-800 to-gray-900">
-                                        <img
+                                        <Image
                                             src={
                                                 project.screenshots[
                                                     currentImageIndex
                                                 ]
                                             }
                                             alt={`${project.name} screenshot ${currentImageIndex + 1}`}
-                                            className="w-full h-full object-cover "
+                                            width={1200} // Increased for better quality
+                                            height={675} // 16:9 aspect ratio
+                                            quality={90} // Higher quality setting
+                                            className="w-full h-full object-cover"
+                                            priority={true} // Prioritize first image
+                                            placeholder="blur"
+                                            blurDataURL="data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAABBxAR/Q9ERP8DAABWUDggGAAAADABAJ0BKg8ACgAAAAgAJYAnAD4B+JmYAAADAA8AAAMAAP7wQAAAAA=="
                                         />
                                     </div>
 

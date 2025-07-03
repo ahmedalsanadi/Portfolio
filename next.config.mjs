@@ -7,9 +7,9 @@ const nextConfig = {
         optimizePackageImports: ['sharp', 'lucide-react'],
     },
     images: {
-        // Enable both optimized and unoptimized images
         unoptimized: false,
-
+        formats: ['image/avif', 'image/webp'],
+        deviceSizes: [640, 828, 1200, 1920],
         remotePatterns: [
             {
                 protocol: 'https',
