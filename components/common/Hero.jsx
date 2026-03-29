@@ -225,7 +225,7 @@ export default function Hero({
                                         </div>
                                     ) : (
                                         <img
-                                            src="/images/personal/profile-3.png"
+                                            src="/images/personal/ahmed-profile.png"
                                             alt="Profile"
                                             className="w-full h-full object-cover relative z-10"
                                         />
